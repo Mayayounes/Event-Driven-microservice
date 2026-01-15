@@ -1,5 +1,5 @@
 # start everything
-docker-compose up -d
+docker-compose down
 docker-compose up --build
 # check all services are running
 docker ps
@@ -15,7 +15,3 @@ docker exec -it event-activity-service-mongodb mongosh
 use events
 show collections
 db.events.find().pretty()
-
-# after editing app.js
-docker-compose down
-docker-compose up --build
